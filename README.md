@@ -21,5 +21,3 @@ This will allow for easy identification of the exact Date and Time that each bac
 ## Backup File Retention
 
 Once the Current backup has been collected from the API and saved the script will remove any files from the SavePath folder that are older than the period of days specified in the RetentionDays variable.
-
-## Testing
