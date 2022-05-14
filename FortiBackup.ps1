@@ -1,8 +1,7 @@
 ﻿
 ##### SETUP #####
 
-$FGFQDN = "172.16.200.254" #Used To Connect to API
-$Hostname = "FG-001" # Used in Filename of Config Backup
+$FGFQDN = "10.20.30.40" #Used To Connect to API$Hostname = "FG-001" # Used in Filename of Config Backup
 $Port = "4443"
 $API_Key = "88888888nHsc33363mfHb3w7777777"
 $SavePath = "C:\ConfigBackups" # Where backup files will be Stored
