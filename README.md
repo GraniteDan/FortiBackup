@@ -15,7 +15,7 @@ The Folder where inforamtion is saved is maintained by the RetentionDays variabl
 
 ## File Naming Format
 
-Backed up configuation files will be named in the following format: hostename_yyyyMMdd_HHmmss.conf
+Backed up configuation files will be named in the following format: hostname_yyyyMMdd_HHmmss.conf.
 This will allow for easy identification of the exact Date and Time that each backup was taken.
 
 ## Backup File Retention
