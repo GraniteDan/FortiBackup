@@ -1,7 +1,7 @@
 # ForitOS Backup Utility: FortiBackup.ps1
 
 This is a Basic Script that will make a WebAPI call to a Fortigate firewall and Perform a Full backup of the Configuration.
-The Folder where inforamtion is saved is maintained by the RetentionDays variable.
+The backup files stored in the destination save folder are maintained by the script using the RetentionDays variable, which makes this script work well as a schedule task to automate backups without the risk of consuming large amounts of disk space.  
 
 ## Setup Variables
 
