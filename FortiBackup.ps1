@@ -1,9 +1,10 @@
 ﻿
 ##### SETUP #####
 
-$FGFQDN = "10.20.30.40" #Used To Connect to API$Hostname = "FG-001" # Used in Filename of Config Backup
+$FGFQDN = "10.20.30.40" #Used To Connect to API
+$Hostname ="LabGate"
 $Port = "4443"
-$API_Key = "88888888nHsc33363mfHb3w7777777"
+$API_Key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 $SavePath = "C:\ConfigBackups" # Where backup files will be Stored
 $RetentionDays = 30
 $APIUrl = "https://$FGFQDN`:$Port/api/v2/monitor/system/config/backup?scope=global&access_token=$API_Key"
@@ -47,6 +48,7 @@ clear-host
 write-host -foregroundcolor yellow  $Header
 
 # Make API Call to Fortigate
+Try{
 $Response = Invoke-RestMethod -Method Get -Uri $APIUrl -ContentType "application/json" -Timeoutsec 120
 #
 
@@ -59,4 +61,9 @@ If ($Response.Length -gt 10){
     $limit = (get-date).adddays(-$RetentionDays)
     write-host "Clearing Aged Config Backups Older than $RetentionDays Days"
     Get-ChildItem -Path $SavePath | Where-Object { !$_.PSIsContainer -and $_.CreationTime -lt $limit } | Remove-Item -Force
+}
+}
+Catch{
+    write-error "Fortigate Backup Failed
+ $error[0]"
 }
