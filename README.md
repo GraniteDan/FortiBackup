@@ -5,9 +5,16 @@ The backup files stored in the destination save folder are maintained by the scr
 
 ## Requirements
 Create a New API Administrator on the fortigate:
+
 https://docs.fortinet.com/document/forticonverter/6.2.1/online-help/866905/connect-fortigate-device-via-api-token#Create_new_REST_API_admin
 
-The Admin Profile used for the API Admin account will require Read/Write permission for **"System"**
+The Admin Profile used for the API Admin account will require the following minimum permissions
+
+Custom Permissions for the **System** section
+- **Administrator Users:** Read/Write
+- **Configuration:** Read
+- **Maintenance:** Read
+
 
 
 ## Setup Variables
