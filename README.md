@@ -14,7 +14,8 @@ Custom Permissions for the **System** section
 - **Administrator Users:** Read/Write
 - **Configuration:** Read
 - **Maintenance:** Read
-
+- 
+![](https://github.com/GraniteDan/FortiBackup/blob/main/backup_permissions.JPG)
 
 
 ## Setup Variables
