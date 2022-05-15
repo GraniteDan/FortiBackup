@@ -3,6 +3,13 @@
 This is a Basic Script that will make a WebAPI call to a Fortigate firewall and Perform a Full backup of the Configuration.
 The backup files stored in the destination save folder are maintained by the script using the RetentionDays variable, which makes this script work well as a schedule task to automate backups without the risk of consuming large amounts of disk space.  
 
+## Requirements
+Create a New API Administrator on the fortigate:
+https://docs.fortinet.com/document/forticonverter/6.2.1/online-help/866905/connect-fortigate-device-via-api-token#Create_new_REST_API_admin
+
+The Admin Profile used for the API Admin account will require Read/Write permission for **"System"**
+
+
 ## Setup Variables
 
 - **$FGFQDN:** either the fully qualified domain name of the Fortigate or it's IP address
