@@ -64,6 +64,8 @@ If ($Response.Length -gt 10){
 }
 }
 Catch{
-    write-error "Fortigate Backup Failed
+    write-error "
+!!! Fortigate Backup Failed !!!
+
  $error[0]"
 }
