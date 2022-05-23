@@ -28,10 +28,22 @@ Custom Permissions for the **System** section
 - **$RetentionDays:** The number of days to retain configuration backup files
 - **$IgnoreCertCheck:** If using a self-signed certificate for the management webui/API this will need to be set to $true
 
+## Optional Git Version Control Variables
+
+- **$SaveToGit** True/False: Do you want to sync to a local git repo for version controand change tracking?
+- **$GitRemotePush** True/False: Do you want to sync to a remote Repo after saving to your local repo?
+- **$GitRemoteName** The Name for the Git Remote defined when you ran "git remote add..."
+- **$LocalRepo** The Folder that you have previously initialized as a Git Repo
+- **GitFileName** The file Name that will be saved to the Local Git Repo (And ultimately synced to the Remote Repo)
+
+### Note: Some items change in a Fortigate config with every backup.  These tend to be hashes relating to certificates, private keys, and passwords. This will trigger changes in your Git repo every time the script runs.
+
 ## File Naming Format
 
 Backed up configuation files will be named in the following format: hostname_yyyyMMdd_HHmmss.conf.
 This will allow for easy identification of the exact Date and Time that each backup was taken.
+
+The Default File Name in your Git Repo will be $Hostname.conf
 
 ## Backup File Retention
 
