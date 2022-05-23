@@ -1,10 +1,10 @@
 ﻿
 ##### SETUP #####
 
-$FGFQDN = "172.16.200.254" #Used To Connect to API
+$FGFQDN = "10.20.30.40" #Used To Connect to API
 $Hostname ="LabGate"
 $Port = "4443"
-$API_Key = "y3cfqgmwtyrxqpj0gz586Q1sj53z4c"
+$API_Key = "42fdae3erxqpj5dks2sdfsdfz4c"
 $SavePath = "C:\ConfigBackups" # Where backup files will be Stored
 $RetentionDays = 30
 $APIUrl = "https://$FGFQDN`:$Port/api/v2/monitor/system/config/backup?scope=global&access_token=$API_Key"
